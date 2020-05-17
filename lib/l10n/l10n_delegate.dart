@@ -6,9 +6,9 @@ class L10nDelegate extends LocalizationsDelegate<L10n> {
   const L10nDelegate();
 
   @override
-  bool isSupported(Locale locale) {
-    return false;
-  }
+  // isSupportedがfalseを返していると、Localizations.of(context, L10n)はnullになる
+  // localeについては、MaterialApp.supportedLocalesで適用されたもののみが渡ってきうる
+  bool isSupported(Locale locale) => ['ja', 'en'].contains(locale.languageCode);
 
   @override
   Future<L10n> load(Locale locale) => L10n.load(locale);
