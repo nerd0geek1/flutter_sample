@@ -8,9 +8,9 @@ class L10n {
   static const LocalizationsDelegate<L10n> delegate = L10nDelegate();
 
   static Future<L10n> load(Locale locale) async {
-    final name = locale.countryCode == null || locale.countryCode.isEmpty
-        ? locale.languageCode
-        : locale.toString();
+    final countryCode = locale.countryCode ?? '';
+    final name = countryCode.isEmpty ? locale.languageCode : locale.toString();
+
     final localeName = Intl.canonicalizedLocale(name);
 
     // messages_allがmessages_*.dartから言語リソースを読み込む
