@@ -1,9 +1,10 @@
 name: fluttersample
 description: A new Flutter application.
 
-publish_to: 'none'
-
 version: 1.0.0+1
+
+flutter:
+  uses-material-design: true
 
 environment:
   sdk: ">=2.9.0-21.10.beta <3.0.0"
@@ -20,7 +21,4 @@ dev_dependencies:
     sdk: flutter
   intl_translation: any
   pedantic_mono: any
-
-flutter:
-  uses-material-design: true
 
