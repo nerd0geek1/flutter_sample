@@ -8,3 +8,4 @@ analyzer:
 linter:
   rules:
     no_default_cases: false
+    lines_longer_than_80_chars: false
