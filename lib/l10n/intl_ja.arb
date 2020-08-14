@@ -5,5 +5,8 @@
   "@appTitle": {
     "type": "text",
     "placeholders": {}
-  }
+  },
+  "platformMenuTitleDeviceSpecific": "端末固有",
+  "platformMenuTitleExternal": "外部連携",
+  "platformMenuTitleGeneric": "一般的"
 }
