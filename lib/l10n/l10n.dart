@@ -27,5 +27,21 @@ class L10n {
   String get appTitle => Intl.message(
         'FLUTTER SAMPLER',
         name: 'appTitle',
+        desc: 'Generic App Title',
+      );
+  String get platformMenuTitleGeneric => Intl.message(
+        'GENERIC',
+        name: 'platformMenuTitleGeneric',
+        desc: 'UITabBar / Drawerのタイトル(一般用)',
+      );
+  String get platformMenuTitleDeviceSpecific => Intl.message(
+        'DEVICE SPECIFIC',
+        name: 'platformMenuTitleDeviceSpecific',
+        desc: 'UITabBar / Drawerのタイトル(端末依存用)',
+      );
+  String get platformMenuTitleExternal => Intl.message(
+        'EXTERNAL',
+        name: 'platformMenuTitleExternal',
+        desc: 'UITabBar / Drawerのタイトル(外部連携用)',
       );
 }
