@@ -5,6 +5,12 @@ import 'package:fluttersample/l10n/l10n.dart';
 import 'package:fluttersample/presentation_layer/platform_widget.dart';
 
 class GenericSamplePage extends StatelessWidget {
+  const GenericSamplePage({
+    this.drawer,
+  });
+
+  final Drawer drawer;
+
   @override
   Widget build(BuildContext context) {
     return PlatformWidget(
@@ -14,10 +20,13 @@ class GenericSamplePage extends StatelessWidget {
   }
 
   Widget _buildForAndroid(BuildContext context) {
+    assert(drawer != null);
+
     return Scaffold(
       appBar: AppBar(
         title: _navigationTitleText(context),
       ),
+      drawer: drawer,
     );
   }
 
