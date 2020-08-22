@@ -1,9 +1,0 @@
-{
-  "@@locale": "messages",
-  "@@last_modified": "2020-05-18T21:09:20.251351",
-  "appTitle": "FLUTTER SAMPLER",
-  "@appTitle": {
-    "type": "text",
-    "placeholders": {}
-  }
-}
