@@ -1,12 +1,13 @@
 {
-  "@@locale": "ja",
-  "@@last_modified": "2020-05-18T21:09:20.251351",
-  "appTitle": "ふらったぁ見本集",
-  "@appTitle": {
-    "type": "text",
-    "placeholders": {}
-  },
-  "platformMenuTitleDeviceSpecific": "端末固有",
-  "platformMenuTitleExternal": "外部連携",
-  "platformMenuTitleGeneric": "一般的"
+	"@@locale": "ja",
+	"@@last_modified": "2020-05-18T21:09:20.251351",
+	"appTitle": "ふらったぁ見本集",
+	"@appTitle": {
+		"type": "text",
+		"placeholders": {}
+	},
+	"platformMenuTitleDeviceSpecific": "端末固有",
+	"platformMenuTitleExternal": "外部連携",
+	"platformMenuTitleGeneric": "一般的",
+	"pageTitleRenderShape": "図形描画"
 }

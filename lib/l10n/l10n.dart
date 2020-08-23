@@ -44,4 +44,9 @@ class L10n {
         name: 'platformMenuTitleExternal',
         desc: 'UITabBar / Drawerのタイトル(外部連携用)',
       );
+  String get pageTitleRenderShape => Intl.message(
+        'RENDER SHAPE',
+        name: 'pageTitleRenderShape',
+        desc: '図形描画ページのタイトル',
+      );
 }
