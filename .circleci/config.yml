@@ -1,0 +1,27 @@
+version: 2
+
+aliases:
+  # machine
+  - &build-machine
+    docker:
+      - image: cirrusci/flutter:latest
+    shell: /bin/bash --login -eo pipefail
+jobs:
+  build:
+    <<: *build-machine
+    steps:
+      - checkout
+      - run:
+          name: setup flutter
+          command: |
+            flutter doctor
+      - run:
+          name: run unit testing
+          command: |
+            flutter test --coverage
+            bash <(curl -s https://codecov.io/bash)
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build
