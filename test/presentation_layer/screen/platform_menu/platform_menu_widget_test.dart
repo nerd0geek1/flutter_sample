@@ -8,8 +8,9 @@ import 'package:fluttersample/presentation_layer/screen/platform_menu/platform_m
 import '../../../widget_test_helper.dart';
 
 void main() {
-  group('PlatformWidget', () {
-    testWidgets('when platform is iOS, it will return Widget for iOS', (WidgetTester tester) async {
+  group('PlatformMenuWidget', () {
+    testWidgets('when platform is iOS, it will return a widget which contains CupertinoTabScaffold',
+        (WidgetTester tester) async {
       debugDefaultTargetPlatformOverride = TargetPlatform.iOS;
       await tester.pumpWidget(WidgetTestHelper.wrapWithMaterialAppAndLocalization(PlatformMenuWidget()));
       await tester.pumpAndSettle();
@@ -24,7 +25,8 @@ void main() {
       debugDefaultTargetPlatformOverride = null;
     });
 
-    testWidgets('when platform is Android, it will return Widget for Android', (WidgetTester tester) async {
+    testWidgets('when platform is Android, it will return GenericSamplePage which drawer is not null',
+        (WidgetTester tester) async {
       debugDefaultTargetPlatformOverride = TargetPlatform.android;
       await tester.pumpWidget(WidgetTestHelper.wrapWithMaterialAppAndLocalization(PlatformMenuWidget()));
       await tester.pumpAndSettle();
