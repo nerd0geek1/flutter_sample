@@ -29,6 +29,7 @@ class MyApp extends StatelessWidget {
         Locale('en'),
         Locale('ja'),
       ],
+      debugShowCheckedModeBanner: false,
     );
   }
 }
