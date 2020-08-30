@@ -4,6 +4,8 @@ import 'package:flutter/widgets.dart';
 import 'package:fluttersample/l10n/l10n.dart';
 import 'package:fluttersample/presentation_layer/platform_widget.dart';
 
+enum GenericSampleTileType { renderShape }
+
 class GenericSamplePage extends StatelessWidget {
   const GenericSamplePage({
     this.drawer,
@@ -27,16 +29,42 @@ class GenericSamplePage extends StatelessWidget {
         title: _navigationTitleText(context),
       ),
       drawer: drawer,
+      body: _listView(context),
     );
   }
 
   Widget _buildForIos(BuildContext context) {
-    return CustomScrollView(
-      slivers: [
-        CupertinoSliverNavigationBar(
-          largeTitle: _navigationTitleText(context),
-        ),
+    return CupertinoPageScaffold(
+      navigationBar: CupertinoNavigationBar(
+        middle: _navigationTitleText(context),
+      ),
+      child: _listView(context),
+    );
+  }
+
+  Widget _listView(BuildContext context) {
+    return ListView(
+      children: [
+        _listTile(context, GenericSampleTileType.renderShape, () {}),
       ],
+    );
+  }
+
+  Widget _listTile(BuildContext context, GenericSampleTileType tileType, GestureTapCallback onTap) {
+    var title = '';
+    switch (tileType) {
+      case GenericSampleTileType.renderShape:
+        title = L10n.of(context).pageTitleRenderShape;
+    }
+
+    return Padding(
+      padding: const EdgeInsets.all(8),
+      child: Card(
+        child: ListTile(
+          title: Text(title),
+          onTap: onTap,
+        ),
+      ),
     );
   }
 
